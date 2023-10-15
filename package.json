@@ -1,0 +1,22 @@
+{
+  "name": "video-downloader",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "owl352",
+  "license": "MIT",
+  "scripts": {
+    "dev": "yarn tsc && node dist/index.js",
+    "build": "yarn tsc --declaration"
+  },
+  "dependencies": {
+    "axios": "^1.5.1",
+    "cheerio": "^1.0.0-rc.12",
+    "colors": "^1.4.0"
+  },
+  "devDependencies": {
+    "@types/cheerio": "^0.22.32",
+    "@types/node": "^20.8.6",
+    "typescript": "^5.2.2"
+  }
+}

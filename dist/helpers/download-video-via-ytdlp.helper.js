@@ -16,8 +16,8 @@ const constants_helper_1 = require("./constants.helper");
 function downloadVideoViaYTDLP(url, prefix, callback = (fname) => new logger_helper_1.Logger("ytdlp callback").info(`${fname} is ready`), onError = (fname) => new logger_helper_1.Logger("ytdlp error").error(`${fname} error!`), onChanges = (data) => new logger_helper_1.Logger("ytdlp on changes").info(data.toString())) {
     return __awaiter(this, void 0, void 0, function* () {
         const fname = prefix + Date.now();
-        const binName = process.platform == "darwin" ? "yt-dlp_macos" : "";
-        const ytdlp = (0, child_process_1.spawn)(`${process.cwd()}/bins/${binName}`, [
+        const binName = process.platform == "darwin" ? "yt-dlp_macos" : "yt-dlp_linux";
+        const ytdlp = (0, child_process_1.spawn)(`${process.cwd()}/node_modulse/@owl352/video-downloader/bins/${binName}`, [
             "-f",
             "b",
             "-v",

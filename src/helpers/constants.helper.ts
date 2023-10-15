@@ -1,4 +1,4 @@
-export const videoStoragePath: string = "./videos/";
+export const videoStoragePath: string = "videos/";
 export const firstLoginDzen: string = "https://sso.dzen.ru/install?uuid=";
 
 export const DzenDataOutlineStart: string =

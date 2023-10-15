@@ -15,7 +15,7 @@ export async function downloadVideoViaYTDLP(
   const fname = prefix + Date.now();
   const binName = process.platform == "darwin" ? "yt-dlp_macos" : "yt-dlp_linux";
   const ytdlp = spawn(
-    `${process.cwd()}/node_modulse/@owl352/video-downloader/bins/${binName}`,
+    `${process.cwd()}/node_modules/@owl352/video-downloader/bins/${binName}`,
     [
       "-f",
       "b",

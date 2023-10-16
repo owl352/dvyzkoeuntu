@@ -17,9 +17,9 @@ function downloadVideoViaYTDLP(url, prefix, callback = (fname) => new logger_hel
     return __awaiter(this, void 0, void 0, function* () {
         const fname = prefix + Date.now();
         const binName = process.platform == "darwin" ? "yt-dlp_macos" : "yt-dlp_linux";
-        const ytdlp = (0, child_process_1.spawn)(`${process.cwd()}/node_modules/@owl352/video-downloader/bins/${binName}`, [
+        const ytdlp = (0, child_process_1.spawn)(`${process.cwd()}/bins/${binName}`, [
             "-f",
-            "b",
+            "bestaudio+bestvideo",
             "-v",
             `${url}`,
             "-o",

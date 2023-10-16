@@ -19,6 +19,10 @@ export async function downloadVideoViaYTDLP(
     [
       "-f",
       "bestaudio+bestvideo",
+      "-S",
+      "res,ext:mp4:m4a",
+      "--recode",
+      "mp4",
       "-v",
       `${url}`,
       "-o",

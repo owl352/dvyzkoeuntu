@@ -20,6 +20,10 @@ function downloadVideoViaYTDLP(url, prefix, callback = (fname) => new logger_hel
         const ytdlp = (0, child_process_1.spawn)(`${process.cwd()}/node_modules/@owl352/video-downloader/bins/${binName}`, [
             "-f",
             "bestaudio+bestvideo",
+            "-S",
+            "res,ext:mp4:m4a",
+            "--recode",
+            "mp4",
             "-v",
             `${url}`,
             "-o",

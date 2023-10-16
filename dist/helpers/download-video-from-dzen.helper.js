@@ -15,7 +15,6 @@ const download_video_via_ytdlp_helper_1 = require("./download-video-via-ytdlp.he
 function downloadVideoFromDzen(url, prefix, callback, onError, onChanges) {
     return __awaiter(this, void 0, void 0, function* () {
         const mpdURL = yield (0, get_mpd_from_dzen_helper_1.getMpdFromDzen)(url);
-        console.log(mpdURL);
         (0, download_video_via_ytdlp_helper_1.downloadVideoViaYTDLP)(mpdURL, prefix, callback, onError, onChanges);
     });
 }

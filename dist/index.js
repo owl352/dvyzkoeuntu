@@ -14,13 +14,6 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const download_video_via_ytdlp_helper_1 = require("./helpers/download-video-via-ytdlp.helper");
 __exportStar(require("./helpers/download-video-from-dzen.helper"), exports);
 __exportStar(require("./helpers/download-video-from-vk.helper"), exports);
 __exportStar(require("./helpers/download-video-from-youtube.helper"), exports);
-function main() {
-    (0, download_video_via_ytdlp_helper_1.downloadVideoViaYTDLP)("https://youtube.com/shorts/KWZMI3Y2ngw?si=sa8HuVAbdYDgBUy6", "dzen");
-}
-if (require.main === module) {
-    main();
-}

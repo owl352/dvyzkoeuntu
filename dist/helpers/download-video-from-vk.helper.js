@@ -11,9 +11,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.downloadVideoFromVk = void 0;
 const download_video_via_ytdlp_helper_1 = require("./download-video-via-ytdlp.helper");
-function downloadVideoFromVk(url, prefix, callback, onError, onChanges) {
+function downloadVideoFromVk(url, prefix, path, callback, onError, onChanges) {
     return __awaiter(this, void 0, void 0, function* () {
-        (0, download_video_via_ytdlp_helper_1.downloadVideoViaYTDLP)(url, prefix, callback, onError, onChanges);
+        (0, download_video_via_ytdlp_helper_1.downloadVideoViaYTDLP)(url, prefix, path, callback, onError, onChanges);
     });
 }
 exports.downloadVideoFromVk = downloadVideoFromVk;

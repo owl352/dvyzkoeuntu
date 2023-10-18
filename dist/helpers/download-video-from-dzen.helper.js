@@ -12,10 +12,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.downloadVideoFromDzen = void 0;
 const get_mpd_from_dzen_helper_1 = require("./get-mpd-from-dzen.helper");
 const download_video_via_ytdlp_helper_1 = require("./download-video-via-ytdlp.helper");
-function downloadVideoFromDzen(url, prefix, callback, onError, onChanges) {
+function downloadVideoFromDzen(url, prefix, path, callback, onError, onChanges) {
     return __awaiter(this, void 0, void 0, function* () {
         const mpdURL = yield (0, get_mpd_from_dzen_helper_1.getMpdFromDzen)(url);
-        (0, download_video_via_ytdlp_helper_1.downloadVideoViaYTDLP)(mpdURL, prefix, callback, onError, onChanges);
+        (0, download_video_via_ytdlp_helper_1.downloadVideoViaYTDLP)(mpdURL, prefix, path, callback, onError, onChanges);
     });
 }
 exports.downloadVideoFromDzen = downloadVideoFromDzen;

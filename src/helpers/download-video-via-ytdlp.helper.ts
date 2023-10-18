@@ -1,10 +1,10 @@
 import { spawn } from "child_process";
 import { Logger } from "./logger.helper";
-import { videoStoragePath } from "./constants.helper";
 
 export async function downloadVideoViaYTDLP(
   url: string,
   prefix: string,
+  path: string,
   callback: Function = (fname: string) =>
     new Logger("ytdlp callback").info(`${fname} is ready`),
   onError: Function = (fname: string) =>
@@ -26,7 +26,7 @@ export async function downloadVideoViaYTDLP(
       "-v",
       `${url}`,
       "-o",
-      `${process.cwd()}/${videoStoragePath + fname}.mp4`,
+      `${process.cwd()}/${path + fname}.mp4`,
     ],
     { cwd: process.cwd() }
   );

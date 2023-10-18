@@ -4,9 +4,10 @@ import { Logger } from "./logger.helper";
 export async function downloadVideoFromVk(
   url: string,
   prefix: string,
+  path: string,
   callback?: Function,
   onError?: Function,
   onChanges?: Function
 ) {
-  downloadVideoViaYTDLP(url, prefix, callback, onError, onChanges);
+  downloadVideoViaYTDLP(url, prefix, path, callback, onError, onChanges);
 }

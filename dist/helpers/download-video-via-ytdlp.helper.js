@@ -19,7 +19,7 @@ function downloadVideoViaYTDLP(url, prefix, callback = (fname) => new logger_hel
         const binName = process.platform == "darwin" ? "yt-dlp_macos" : "yt-dlp_linux";
         const ytdlp = (0, child_process_1.spawn)(`${process.cwd()}/node_modules/@owl352/video-downloader/bins/${binName}`, [
             "-f",
-            "bestaudio+bestvideo",
+            url.substring(0, 15).includes('vk') ? "best" : "bestaudio+bestvideo",
             "-S",
             "res,ext:mp4:m4a",
             "--recode",
